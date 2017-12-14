@@ -1,20 +1,102 @@
 /**index.wxss**/
+
+.f-position-rel {
+    position: relative;
+}
+
+.f-flex {
+    display: flex;
+    flex-flow: row nowrap;
+} 
+
+.f-flex-fixed {
+    flex: 1;
+}
+
+.f-flex image {
+    flex: 1;
+}
+
+.f-flex-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .m-indexFloor {
-  width: 750rpx;
-  height: 500rpx;
+    width: 750rpx;
+    height: 500rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.m-indexFloor image {
+    width: 100%;
+    height: 500rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+swiper {
+    width: 100%;
+    height: 100%;
 }
 
-.usermotto {
-  margin-top: 200px;
+swiper .wx-swiper-dot {
+    width: 20rpx;
+    height: 20rpx;
+    background-color: #fff;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjk1NTdBRjc3RTA3NDExRTdCMjQ1QTdBQTA2OEY4Qjg2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjk1NTdBRjc4RTA3NDExRTdCMjQ1QTdBQTA2OEY4Qjg2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTU1N0FGNzVFMDc0MTFFN0IyNDVBN0FBMDY4RjhCODYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTU1N0FGNzZFMDc0MTFFN0IyNDVBN0FBMDY4RjhCODYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6z9ap9AAAAvUlEQVR42ozQPw5BQRDH8fUnOqUEtU7yCqFQqCSCSjScgIQj0ClcQF4h1GjouYKQCHEELkF8J/m9ZEuTfJLdmdm38zbWHLkoOhigjA8uWOFgxbiaZkq0kEEWbexVc0l0MdWBNzZa95FT7WqN0eUvNHDXfo0j8hjb1YEKW6/J4oGd1oE1ft0fEfe+0kPRqxWVs7jZjCHqmuWkEfyfsQgThYp7skihhjSqklbTHIukNhOcMURJOXvwpd7S/QQYAFVnIb0Ni9bOAAAAAElFTkSuQmCC') no-repeat center/cover;
+}
+
+swiper .wx-swiper-dot-active {
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAABLcGxfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU5MzczMTE0RTBCMDExRTdCMDU1QjE5Q0FCMzU5N0YyIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU5MzczMTE1RTBCMDExRTdCMDU1QjE5Q0FCMzU5N0YyIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTkzNzMxMTJFMEIwMTFFN0IwNTVCMTlDQUIzNTk3RjIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTkzNzMxMTNFMEIwMTFFN0IwNTVCMTlDQUIzNTk3RjIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7wiDXcAAAAiUlEQVR42mL0yGLABkKg9Bp0CRYsijmBuBnK3grE35ElmbBoiAFiDSiOQZdE1yAAxJVI/EqoGE4NOUCsiMRXhIph1SADxHlYnAgSk8WmoQSIRbFoAIkVo2vQBuIUBtwgBaoGrqEaiLnxaOCGqgFrcATiSAbCAKTGERRxoLj+BMT/CGgAGZ4FEGAAGL8PgspHSOIAAAAASUVORK5CYII=');
+    border-radius: 0;
+}
+
+.m-shop-title {
+    width: 250rpx;
+    height: 500rpx;
+    background-color: #648749;
+}
+
+.m-shop-title .content {
+    width: 150rpx;
+}
+
+.content p {
+    display: block;
+    width: 100%;
+    font-size: 48rpx;
+    line-height: 63rpx;
+    font-family: "Arial Bold"; 
+    color: #fff;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.content i {
+    font-family: "PingFang SC";
+    font-size: 36rpx;
+    line-height: 58rpx;
+    color: #fff;
+}
+
+.m-gift-title {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 250rpx;
+    height: 250rpx;
+    background-color: #648749;
+}
+
+.m-gift-title .content {
+    width: 115rpx;
+}
+
+.m-gift-title .content p {
+    line-height: 53rpx;
+}
+
+.m-gift-title .content i {
+    padding-top: 20rpx;
+    line-height: 36rpx;
 }

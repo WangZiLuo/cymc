@@ -1,17 +1,36 @@
 <!--index.wxml-->
 <view class="container">
-
     <view class="m-indexFloor">
-        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-        <block wx:else>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block>
+        <swiper indicator-dots="{{true}}"
+            autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+                <block wx:for="{{imgUrls}}" wx:key="index">
+                    <swiper-item>
+                        <image src="{{item}}" class="slide-image"/>
+                    </swiper-item>
+                </block>
+                
+        </swiper>    
     </view>
-    <view class="m-indexFloor">
-        <text class="user-motto">{{motto}}</text>
+    <view class="m-indexFloor f-flex" bindtap="toShop">
+        <view class='m-shop-title f-flex-cc'>
+            <div class="content">
+                <p>onlinestore.</p>
+                <i>线上商城</i>
+            </div>
+        </view>
+        <image class='f-flex-fixed' src='/image/assets/index_Floor_02.jpg'
+            mode='aspectFill'
+        ></image>
     </view>
-    <view class="m-indexFloor">
-        <text class="user-motto">{{motto}}</text>
+    <view class="m-indexFloor f-position-rel">
+        <image src='/image/assets/index_Floor_03.jpg'
+            mode='aspectFill'
+        ></image>
+        <view  class='m-gift-title f-flex-cc'>
+            <div class="content">
+                <p>gift cart.</p>
+                <i>礼品卡</i>
+            </div>
+        </view>
     </view>
 </view>
