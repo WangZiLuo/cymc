@@ -1,0 +1,36 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+    <view class="m-home-logo f-flex-cc"> 
+        <image src='/image/assets/home_logo.png'
+            mode='aspectFill'
+        ></image>
+    </view>
+    <view class='m-topColumn'>
+        <view class="banner">
+            <image></image>
+        </view>
+        <view class="topNav f-flex-sb-fs">
+            <view class="navItem f-flex-col" wx:for="{{topCol.list}}" wx:key='{{index}}'>
+                <image src='{{item.imgUrl}}' ></image>
+                <view class="aLink">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class='m-subColumn' wx:for='{{subCol}}' wx:key='{{index}}'>
+        <view class='columnHead f-flex-col'>
+            <view class='column_title f-flex-col'>
+                <text class='title'>[ {{item.title}} ]</text>
+                <text class='nickname'>{{item.nickname}}</text>
+                <image src='{{item.titImg}}'></image>
+            </view>
+            <view class='banner' style='width: 100%;'>
+                <image src='{{item.bannerImg}}'
+                    mode='aspectFill'
+                ></image>
+            </view>
+        </view>
+        <view>
+
+        </view>
+    </view>
+</view>

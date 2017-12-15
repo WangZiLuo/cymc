@@ -1,6 +1,6 @@
 /**index.wxss**/
 
-.f-position-rel {
+.f-position-rel { 
     position: relative;
 }
 

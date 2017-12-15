@@ -1,9 +1,52 @@
 /**app.wxss**/
+
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-} 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.f-position-rel {
+    position: relative;
+}
+
+.f-flex {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.f-flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.f-flex-fixed {
+    flex: 1;
+}
+
+.f-flex image {
+    flex: 1;
+}
+
+.f-flex-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-flex-sc {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.f-flex-sb-fs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

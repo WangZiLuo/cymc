@@ -1,0 +1,71 @@
+/* pages/home/home.wxss */
+
+.m-home-logo {
+    padding-top: 29rpx;
+    width: 100%;
+}
+
+.m-home-logo image {
+    width: 160rpx;
+    height: 88rpx;
+}
+
+.m-topColumn, .topNav {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.topNav{
+    padding-left: 50rpx;
+    padding-right: 50rpx;
+}
+
+.m-topColumn .topNav image{
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.m-topColumn .topNav .aLink {
+    padding-top: 23rpx;
+    width: 1em;
+    font-size: 20rpx;
+    color: #000;
+}
+
+.m-subColumn {
+    padding-top: 100rpx;
+    width: 100%;
+}
+
+.m-subColumn .column_title {
+    box-sizing: border-box;
+    padding-top: 23rpx;
+    padding-bottom: 23rpx; 
+    width: 600rpx;
+    height: 154rpx;
+}
+
+.m-subColumn .column_title .title {
+    font-size: 28rpx;
+    line-height: 36rpx;
+    color: #000;
+}
+
+.m-subColumn .column_title .nickname {
+    font-size: 14rpx;
+    line-height: 14rpx;
+    color: #000;
+}
+
+.m-subColumn .column_title image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.m-subColumn .columnHead .banner image {
+    width: 100%;
+    height: 306rpx;
+}
+
+
+

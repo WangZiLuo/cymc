@@ -11,8 +11,8 @@ Page({
     },
     //事件处理函数
     toShop: function () {
-        wx.navigateTo({
-            url: '../shop/shop'
+        wx.switchTab({
+            url: '../home/home'
         })
         // wx.redirectTo({
         //     url: '../shop/shop'
