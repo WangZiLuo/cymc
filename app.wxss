@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+text {
+    color: #000;
+}
+
 .f-position-rel {
     position: relative;
 }
@@ -16,6 +20,19 @@
 .f-flex {
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+}
+
+.f-flex-reverse {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: center;
+}
+
+.f-flex-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .f-flex-col {
@@ -25,11 +42,7 @@
     justify-content: space-between;
 }
 
-.f-flex-fixed {
-    flex: 1;
-}
-
-.f-flex image {
+.f-flex-fixed { 
     flex: 1;
 }
 
@@ -39,7 +52,7 @@
     align-items: center;
 }
 
-.f-flex-sc {
+.f-flex-sa-c {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -50,3 +63,5 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
+

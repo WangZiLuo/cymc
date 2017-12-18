@@ -29,8 +29,33 @@
                 ></image>
             </view>
         </view>
-        <view>
-
+        <view class='m-columnItem-fir f-flex-wrap' wx:if='{{item.type==1}}'>
+            <view class='goods f-flex-col' wx:for='{{item.list}}' wx:key='{{index}}'>
+                <image src='{{item.imgUrl}}'>
+                </image>
+                <text class='name'>{{item.name}}</text>
+                <text class='nickname'>{{item.nickname}}</text>
+            </view>
+        </view>
+        <view class='m-columnItem-sec' wx:if='{{item.type==2}}'>
+            <view class="goods {{index%2==0?'f-flex':'f-flex-reverse'}}" wx:for='{{item.list}}' wx:key='{{index}}'>
+                <image src='{{item.imgUrl}}'>
+                </image>
+                <view class='f-flex-col f-flex-fixed'>
+                    <text class='name'>{{item.name}}</text>
+                    <text class='nickname'>{{item.nickname}}</text>
+                </view>
+            </view>
+        </view>
+        <view class='m-columnItem-thd' wx:if='{{item.type==3}}'>
+            <view class="goods {{index%2==0?'f-flex-reverse':'f-flex'}}" wx:for='{{item.list}}' wx:key='{{index}}'>
+                <image src='{{item.imgUrl}}'>
+                </image>
+                <view class='f-flex-col f-flex-fixed'>
+                    <text class='name'>{{item.name}}</text>
+                    <text class='nickname'>{{item.nickname}}</text>
+                </view>
+            </view>
         </view>
     </view>
 </view>

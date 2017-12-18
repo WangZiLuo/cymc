@@ -37,25 +37,25 @@ Page({
                         id: 11,
                         name: '抹茶千层',
                         nickname: 'Matcha',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_01.jpg'
                     },
                     {
                         id: 12,
                         name: '抹茶千层',
                         nickname: 'Matcha',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_02.jpg'
                     },
                     {
                         id: 13,
                         name: '抹茶千层',
                         nickname: 'Matcha',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_03.jpg'
                     },
                     {
                         id: 14,
                         name: '抹茶千层',
                         nickname: 'Matcha',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_04.jpg'
                     }
                 ]
             },
@@ -70,18 +70,18 @@ Page({
                         id: 21,
                         name: '抹茶千层',
                         nickname: 'Matcha',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_05.jpg'
                     },
                     {
                         id: 22,
                         name: '抹茶千层',
                         nickname: 'Matcha',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_06.jpg'
                     }
                 ]
             },
             {
-                type: 2,
+                type: 3,
                 title: '周边',
                 nickname: 'Gift',
                 titImg: '/image/assets/subCol_tit_03.png',
@@ -91,19 +91,19 @@ Page({
                         id: 31,
                         name: '手机壳',
                         nickname: 'Gift For You',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_07.jpg'
                     },
                     {
                         id: 32,
                         name: '钥匙扣',
                         nickname: 'Gift For You',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_08.jpg'
                     },
                     {
                         id: 33,
                         name: '手机壳',
                         nickname: 'Gift For You',
-                        imgUrl: ''
+                        imgUrl: '/image/assets/col_item_09.jpg'
                     }
                 ]
             }

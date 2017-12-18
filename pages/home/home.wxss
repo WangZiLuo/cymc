@@ -67,5 +67,105 @@
     height: 306rpx;
 }
 
+.m-columnItem-fir {
+    padding: 50rpx 50rpx 0;
+}
+
+.m-columnItem-fir .goods {
+    padding-top: 5rpx;
+    padding-bottom: 9rpx;
+}
+
+.m-columnItem-fir image {
+    width: 300rpx;
+    height: 300rpx;
+}
+
+.m-columnItem-fir .name {
+    padding-top: 25rpx;
+    padding-right: 21rpx;
+    width: 100%;
+    font-size: 24rpx;
+    line-height: 33rpx;
+    text-align: right;
+}
+
+.m-columnItem-fir .nickname {
+    font-size: 16rpx;
+    padding-right: 21rpx;
+    width: 100%;
+    line-height: 25rpx;
+    text-align: right;
+}
+
+.m-columnItem-sec image {
+    width: 400rpx;
+    height: 400rpx;
+}
+
+.m-columnItem-sec .goods {
+    padding-top: 30rpx;
+}
+
+.m-columnItem-sec .f-flex {
+    padding-left: 35rpx; 
+}
+
+.m-columnItem-sec .f-flex-reverse {
+    padding-right: 35rpx;
+}
+
+.m-columnItem-sec .name {
+    font-size: 24rpx;
+    line-height: 37rpx;
+}
+
+.m-columnItem-sec .nickname {
+    font-size: 16rpx;
+    line-height: 25rpx;
+}
+
+.m-columnItem-thd {
+    padding: 30rpx 50rpx;
+}
+
+.m-columnItem-thd image {
+    width: 325rpx;
+    height: 200rpx;
+}
+
+.m-columnItem-thd .name {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 28rpx;
+    line-height: 48rpx;
+}
+
+.m-columnItem-thd .nickname {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 24rpx;
+    line-height: 34rpx;
+}
+
+.m-columnItem-thd .f-flex-reverse .name {
+    padding-right: 75rpx;
+    text-align: right;
+}
+
+.m-columnItem-thd .f-flex-reverse .nickname {
+    padding-right: 75rpx;
+    text-align: right;
+}
+
+.m-columnItem-thd .f-flex .name {
+    padding-left: 75rpx;
+    text-align: left;
+}
+
+.m-columnItem-thd .f-flex .nickname {
+    padding-left: 75rpx;
+    text-align: left;
+}
 
 

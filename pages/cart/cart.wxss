@@ -1,1 +1,40 @@
 /* pages/cart/cart.wxss */
+
+.cart-totalBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.cart-totalBar .btn-allCheck {
+    /* width: 220rpx; */
+}
+
+.cart-totalBar .btn-allCheck image {
+    padding-left: 48rpx;
+    padding-right: 13rpx;
+    width: 46rpx;
+    height: 46rpx;
+}
+
+.cart-totalBar .btn-allCheck text {
+    padding-left: 8rpx;
+    padding-right: 28rpx; 
+    font-size: 26rpx;
+    color: #999;
+}
+
+.cart-totalBar .btn-settle {
+    width: 200rpx;
+    height: 100rpx;
+    font-size: 28rpx;
+    line-height: 100rpx;
+    color: #fff;
+    text-align: center;
+    background-color: #648749;
+}
+
+.cart-totalBar .cart-total .word{
+    
+}
