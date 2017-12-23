@@ -1,5 +1,5 @@
 <!--index.wxml--> 
-<view class="container"> 
+<view class="container">  
     <view class="m-indexFloor"> 
         <swiper indicator-dots="{{true}}"
             autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
@@ -8,8 +8,7 @@
                         <image src="{{item}}" class="slide-image"/>
                     </swiper-item>
                 </block>
-                
-        </swiper>    
+        </swiper>
     </view>
     <view class="m-indexFloor f-flex" bindtap="toShop">
         <view class='m-shop-title f-flex-cc'>

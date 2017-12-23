@@ -1,5 +1,8 @@
 /**app.wxss**/
 
+image, div {padding: 0;margin: 0;}
+image {border: 0;}
+
 .container {
     height: 100%;
     display: flex;
@@ -9,8 +12,31 @@
     box-sizing: border-box;
 }
 
+ .f-cb:after, .f-cbli li:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}  
+
+/* .f-cb:after {
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.f-cb {
+    zoom: 1;
+}  */
+
 text {
     color: #000;
+}
+
+.color {
+    color: #648749;
 }
 
 .f-position-rel {
@@ -29,10 +55,23 @@ text {
     align-items: center;
 }
 
+.f-flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .f-flex-wrap {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
+}
+
+.f-flex-sb-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .f-flex-col {
@@ -42,7 +81,7 @@ text {
     justify-content: space-between;
 }
 
-.f-flex-fixed { 
+.f-flex-fixed {
     flex: 1;
 }
 
@@ -64,4 +103,26 @@ text {
     align-items: flex-start;
 }
 
+.f-flex-fs-c {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
 
+.fs-28 {
+    font-size: 28rpx;
+}
+
+.fs-23 {
+    font-size: 24rpx;
+}
+
+.border-1 {
+    border: 1px solid #648749;
+    border-radius: 10rpx;
+}
+
+.border-das {
+    border: 1px dashed #333;
+}

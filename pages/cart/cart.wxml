@@ -1,16 +1,42 @@
 <!--pages/cart/cart.wxml-->
 <view class="container">
-
-
+    <view class='m-cart-row'>
+        <block wx:for='{{cartList}}' wx:key='{{index}}'>
+            <view class='cart-item f-cb'>
+                <view class='hold f-flex' style="{{item.txtStyle}}" data-index='{{index}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
+                    <view class='btn-check f-flex' data-index='{{index}}' bindtap='select'>
+                        <image src='{{item.check?checkImg.checked:checkImg.check}}' ></image>
+                    </view>
+                    <image src='{{item.imgUrl}}' class='goodsImg'>
+                    </image>
+                    <view class='info f-flex-fixed'>
+                        <view class='f-flex-wrap'>
+                            <text>{{item.name}}</text>
+                            <text class='color'>￥{{item.price}}</text>
+                        </view>
+                        <text class='amount color f-flex-end'>X{{item.amount}}</text>
+                        <view class='norm'>
+                            <block wx:for='{{item.norm}}' wx:key='{{index}}'>
+                                <text>{{item}}</text>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+                <view class='slipDelete' data-index='{{index}}' bindtap='delItem'>
+                    删除
+                </view>
+            </view>
+        </block>
+    </view>
 </view>
 <view class='cart-totalBar f-flex'>
-    <view class='btn-allCheck f-flex {{check}}'>
-        <image src='{{checkImg.check}}'></image>
+    <view class="btn-check f-flex {{checkAll?'checked':'check'}}" bindtap="selectAll">
+        <image src='{{checkAll?checkImg.checked:checkImg.check}}'></image>
         <text>全选</text>
     </view>
-    <view class='cart-total f-flex-fixed'>
+    <view class='cart-total f-flex-fixed f-flex-end'>
         <text class='word'>合计</text>
-        <text class='num'>￥</text>
+        <text class='num'>￥{{total}}</text>
     </view>
     <view class='btn-settle'>结算</view>
 </view>
