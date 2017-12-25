@@ -56,14 +56,34 @@ Page({
                     isCheck: 0
                 }
             ]
+        },
+        requestData: {
+            id: '',
+            name: '',
+            norm: '',
+            amount: 1,
+            recTime: ''
         }
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) { 
+    onLoad: function (options) {
 
+        this.initRequestData()
+    },
+    initRequestData() {
+        let _requestData = {
+            id: 24,
+            name: this.data.goodsInfo.name,
+            norm: this.data.paramselect.norm[0].html,
+            amount: 1,
+            recTime: ''
+        }
+        this.setData({
+            requestData: _requestData
+        })
     },
     noTouch(e) {
         
@@ -89,13 +109,14 @@ Page({
         this.setData({
             'paramselect.amount': ++this.data.paramselect.amount
         })
+        this.data.requestData.amount = this.data.paramselect.amount
     },
     minus() {
-        console.log(this.data.paramselect.amount)
         if (!(this.data.paramselect.amount==1)) {
             this.setData({
                 'paramselect.amount': --this.data.paramselect.amount
             })
+            this.data.requestData.amount = this.data.paramselect.amount
         }
     },
     chooseNorm(e) {
@@ -106,6 +127,7 @@ Page({
                 this.setData({
                     'paramselect.normHtml': item.html
                 })
+                this.data.requestData.norm = item.html
             } else {
                 item.isCheck = 0
             }
@@ -114,14 +136,20 @@ Page({
             'paramselect.norm': this.data.paramselect.norm
         })
     },
+    /**
+     * 判断请求对象requestData的属性是否都有值
+     */
     chooseRecTime(e) {
         const _index = e.currentTarget.dataset.index
+        let x = 0
         this.data.paramselect.recTime.forEach((item, index) => {
-            if (!item.optional) {
+            if (!item.optional) {   //optional表示是否为可选的收获时间
+                this.data.requestData.recTime = ''
                 return
             }
             if (index == _index) {
                 item.isCheck = 1
+                this.data.requestData.recTime = item.html
             } else {
                 item.isCheck = 0
             }
@@ -129,6 +157,24 @@ Page({
         this.setData({
             'paramselect.recTime': this.data.paramselect.recTime
         })
+    },
+    /**
+     * 确认下单请求
+     */
+    confirm() {
+        const flag = (() => {   //判断请求对象requestData 如有属性为空 返回false
+            for (let i in this.data.requestData) {
+                if (this.data.requestData[i]=='') {
+                    return false
+                }
+            }
+            return true
+        })()
+        if(flag) {
+            console.log(this.data.requestData)
+        } else {
+            console.log('false')
+        }
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -143,6 +189,18 @@ Page({
     onShow: function () {
         wx.setNavigationBarTitle({
             title: '商品详情'
+        })
+        const timeNow = 907,timeRec = timeNow + 500;
+        this.data.paramselect.recTime.forEach((item) => {
+            if (timeRec <= item.endTime) {
+                item.optional = 1
+            } else {
+                item.optional = 0
+            }
+
+        })
+        this.setData({
+            'paramselect.recTime': this.data.paramselect.recTime
         })
     },
    

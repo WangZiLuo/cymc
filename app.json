@@ -6,7 +6,8 @@
         "pages/shop/shop",
         "pages/cart/cart",
         "pages/ucenter/ucenter",
-        "pages/goods_detail/goods_detail"
+        "pages/goods_detail/goods_detail",
+        "pages/order_confirm/order_confirm"
     ],
     "window": {
         "backgroundTextStyle": "light",

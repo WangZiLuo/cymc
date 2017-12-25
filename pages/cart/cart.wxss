@@ -1,6 +1,6 @@
 /* pages/cart/cart.wxss */
 
-page {
+page { 
     background-color: #f2f2f2;
 }
 

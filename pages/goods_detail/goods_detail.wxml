@@ -66,7 +66,7 @@
             </view>
         </view>
     </view>
-    <view class='confirm'>确认</view>
+    <view class='confirm' bindtap='confirm'>确认</view>
 </view>
 <view class="popup-mask {{isShow?'mask-show':''}}" bindtap='popup' catchtouchmove='noTouch'>
 </view>
