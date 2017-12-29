@@ -1,19 +1,15 @@
 <!--pages/order_confirm/order_confirm.wxml-->
-<view class="container">
-    <view class='address-confirm f-flex'>
-        <image
-            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg3Njk4QkVERTk0RjExRTdCMjQzQTU2OTJFNTNENjNBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg3Njk4QkVFRTk0RjExRTdCMjQzQTU2OTJFNTNENjNBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODc2OThCRUJFOTRGMTFFN0IyNDNBNTY5MkU1M0Q2M0EiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODc2OThCRUNFOTRGMTFFN0IyNDNBNTY5MkU1M0Q2M0EiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5QCki5AAACf0lEQVR42pSWaYjNYRSH770uhUbXkkmELJOSJUQSkkziAxJhfJCJaCxNKD5pJEsxmZElH6RkCYOEqFGUJcMNyfaFRtYPkyUijPGc+l39O713O/U0zbv8/u97znvOufF0Oh0LWDuYARUwBrpCHL7CYzgJDfDTb0wExEzoHpyA9nAI1kM17IUv+mvCC/3mpPt/BRyAszAbXsfC1h12wHEog5qQ4DrYBYvhWCy3tcAyOAMXIaUb/L/yKNgJqwsQi9pVWACroNwG4gqKTfzQNX1wJsJMuAXnswjvgal2MDvheJgEW92iEkWyEaZDj8h4Z7e2DgbDnKRO9QGeuEUW3Ql6Ng8j45thBEyLjL2CJhNMyH9NunLGBuhUlU7M7DSM082idsf2JXSVd25yKHyW37zd1XMa7cY/WpBN8Dd0dJMm1gm6BARTGm9x46bRZoJvoK+bfAC/YE1AsFKCN9x4b9uTVJpVKXLfNflNYpYxpbBfH1gCK2FtwE0j4bmd8DZ0gz5uwTlFskzv7zJMVv7Wu7U9YRjcTMrJ72EKvHALGxXRXnrkb+FPwA3DoRWuJVSCLqlUhaxVfm7OIma2SDdtzuTyYT3WsbHirVSpeSRaHB7BSwWnWLNA/YULUcE22C2H9y9CLKXiezRTvaMV28r6M1hehOBc6AD7Qi3AMmaLrj2oALESFYp6BSzYUxrky20FCG5UMtTma1KbYJZqZDbrp0yyD3/KJ3hFEavVYw7ZdngayJigYKZhDdFpvc1XMKrk95xtNGNW75a6ohtTw69Tz74f2pjM4adTgbEafaQ626ZkEW+uQj8Eyn0gCvGht4FqWgfheq6FhQrOUyPbkG/hPwEGACpQi83A+a7EAAAAAElFTkSuQmCC'
-        ></image>
+<view class="container"> 
+    <view class='address-confirm f-flex blank' data-page="addressManage" bindtap="toLink" wx:if="{{requestData.address}}">
+        <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg3Njk4QkVERTk0RjExRTdCMjQzQTU2OTJFNTNENjNBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg3Njk4QkVFRTk0RjExRTdCMjQzQTU2OTJFNTNENjNBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODc2OThCRUJFOTRGMTFFN0IyNDNBNTY5MkU1M0Q2M0EiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODc2OThCRUNFOTRGMTFFN0IyNDNBNTY5MkU1M0Q2M0EiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5QCki5AAACf0lEQVR42pSWaYjNYRSH770uhUbXkkmELJOSJUQSkkziAxJhfJCJaCxNKD5pJEsxmZElH6RkCYOEqFGUJcMNyfaFRtYPkyUijPGc+l39O713O/U0zbv8/u97znvOufF0Oh0LWDuYARUwBrpCHL7CYzgJDfDTb0wExEzoHpyA9nAI1kM17IUv+mvCC/3mpPt/BRyAszAbXsfC1h12wHEog5qQ4DrYBYvhWCy3tcAyOAMXIaUb/L/yKNgJqwsQi9pVWACroNwG4gqKTfzQNX1wJsJMuAXnswjvgal2MDvheJgEW92iEkWyEaZDj8h4Z7e2DgbDnKRO9QGeuEUW3Ql6Ng8j45thBEyLjL2CJhNMyH9NunLGBuhUlU7M7DSM082idsf2JXSVd25yKHyW37zd1XMa7cY/WpBN8Dd0dJMm1gm6BARTGm9x46bRZoJvoK+bfAC/YE1AsFKCN9x4b9uTVJpVKXLfNflNYpYxpbBfH1gCK2FtwE0j4bmd8DZ0gz5uwTlFskzv7zJMVv7Wu7U9YRjcTMrJ72EKvHALGxXRXnrkb+FPwA3DoRWuJVSCLqlUhaxVfm7OIma2SDdtzuTyYT3WsbHirVSpeSRaHB7BSwWnWLNA/YULUcE22C2H9y9CLKXiezRTvaMV28r6M1hehOBc6AD7Qi3AMmaLrj2oALESFYp6BSzYUxrky20FCG5UMtTma1KbYJZqZDbrp0yyD3/KJ3hFEavVYw7ZdngayJigYKZhDdFpvc1XMKrk95xtNGNW75a6ohtTw69Tz74f2pjM4adTgbEafaQ626ZkEW+uQj8Eyn0gCvGht4FqWgfheq6FhQrOUyPbkG/hPwEGACpQi83A+a7EAAAAAElFTkSuQmCC'></image>
         <view class='address-txt f-flex-fixed f-flex-col-cs'>
             <text>浙江省-|-杭州市-|-下城区</text>
             <text>蓝图创客基地6幢</text>
             <text>收件人: 跳跳糖 13566666666</text>
         </view>
-        <image class='link'
-            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAARCAYAAAAPFIbmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM4NjRFMEVGRTk0RjExRTdBNEZGRjMyOThEQzk5QUIwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM4NjRFMEYwRTk0RjExRTdBNEZGRjMyOThEQzk5QUIwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Qzg2NEUwRURFOTRGMTFFN0E0RkZGMzI5OERDOTlBQjAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Qzg2NEUwRUVFOTRGMTFFN0E0RkZGMzI5OERDOTlBQjAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5VLRNXAAAA8klEQVR42nSSsWrCUBSGb05c+ii+hotDBzcpiEoorsWhi6ODLYiDg1IaWpqARkhBXXyOzD6Gm2CT+F1NQcy9B37+c879Lsk5iZMkSZRl2VIptVOWEIA9/osebVDFcZwhfsjzXIMttClBhU+BT4Ar8g6KTZCOOeARMCz6kQnS8Q34B/hD/qBrE6QjFJETA32Ru8ivWAaKbh7tXiAaisZ1JyKq6K3TNK2SjsW2Gy7VsVf8XSxAg3fa4iPKNzEATYAYH1BOTNM9AQQAL+Sfpj15HPqoRx6UNs7BM5ohj3JR+gtQn8MP1DUB/1ANoH3/UW/jLMAAkS57VeFwlgkAAAAASUVORK5CYII='
-        ></image>
+        <image class='link' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAARCAYAAAAPFIbmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM4NjRFMEVGRTk0RjExRTdBNEZGRjMyOThEQzk5QUIwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM4NjRFMEYwRTk0RjExRTdBNEZGRjMyOThEQzk5QUIwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Qzg2NEUwRURFOTRGMTFFN0E0RkZGMzI5OERDOTlBQjAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Qzg2NEUwRUVFOTRGMTFFN0E0RkZGMzI5OERDOTlBQjAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5VLRNXAAAA8klEQVR42nSSsWrCUBSGb05c+ii+hotDBzcpiEoorsWhi6ODLYiDg1IaWpqARkhBXXyOzD6Gm2CT+F1NQcy9B37+c879Lsk5iZMkSZRl2VIptVOWEIA9/osebVDFcZwhfsjzXIMttClBhU+BT4Ar8g6KTZCOOeARMCz6kQnS8Q34B/hD/qBrE6QjFJETA32Ru8ivWAaKbh7tXiAaisZ1JyKq6K3TNK2SjsW2Gy7VsVf8XSxAg3fa4iPKNzEATYAYH1BOTNM9AQQAL+Sfpj15HPqoRx6UNs7BM5ohj3JR+gtQn8MP1DUB/1ANoH3/UW/jLMAAkS57VeFwlgkAAAAASUVORK5CYII='></image>
     </view>
-    <view class='m-goodList-row'>
+    <view class='m-goodList-row blank'>
         <block wx:for='{{orderInfo.list}}' wx:key='{{index}}'>
             <view class='cart-item f-cb'>
                 <view class='hold f-flex' style="{{item.txtStyle}}" data-index='{{index}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE">
@@ -35,4 +31,64 @@
             </view>
         </block>
     </view>
-</view> 
+    <view class='address-append' wx:if="{{!requestData.address}}">
+        <view class='m-line'>
+            <view class='hollow circle'></view>
+            <view class='line half'></view>
+        </view>
+        <view class='order-inp-list'>
+            <view class='cell f-flex blank'>
+                <text class='fs-30'>联系人</text>
+                <input class='f-flex-fixed fs-28' bindinput="bindKeyInput" placeholder="名字" />
+            </view>
+            <view class='cell f-flex blank'>
+                <text class='fs-30'>手机号码</text>
+                <input type="number" confirm-type="done" class='f-flex-fixed fs-28' bindinput="bindKeyInput" placeholder="手机或固定电话" />
+            </view>
+            <view class="cell f-flex blank">
+                <text class='fs-30'>选择地区</text>
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <view class="picker" style='font-size: 26rpx;color: #333;'>
+                        {{region[0]}} {{region[1]}} {{region[2]}}
+                    </view>
+                </picker>
+            </view>
+            <view class='cell f-flex blank'>
+                <text class='fs-30'>详细地址</text>
+                <input class='f-flex-fixed fs-28' bindinput="bindKeyInput" placeholder="如街道,楼层,门牌号等" />
+            </view>
+
+        </view>
+        <view class='m-line'>
+            <view class='circle'></view>
+            <view class='line'></view>
+        </view>
+    </view>
+    <view class='order-choose'>
+        <view class='cell f-flex blank'>
+            <text class='fs-30'>买家留言</text>
+            <input class='f-flex-fixed fs-28' bindinput="bindKeyInput" placeholder="点击给商家留言" />
+        </view>
+        <view class='cell f-flex blank'>
+            <text class='fs-30'>配送方式</text>
+            <text class='fs-28' style="color: #999;">普通快递</text>
+        </view>
+        <view class='cell f-flex-wrap blank'>
+            <text class='fs-30'>优惠券</text>
+            <image style="width: 20rpx;height: 38rpx;" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAARCAYAAAAPFIbmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM4NjRFMEVGRTk0RjExRTdBNEZGRjMyOThEQzk5QUIwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM4NjRFMEYwRTk0RjExRTdBNEZGRjMyOThEQzk5QUIwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Qzg2NEUwRURFOTRGMTFFN0E0RkZGMzI5OERDOTlBQjAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Qzg2NEUwRUVFOTRGMTFFN0E0RkZGMzI5OERDOTlBQjAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5VLRNXAAAA8klEQVR42nSSsWrCUBSGb05c+ii+hotDBzcpiEoorsWhi6ODLYiDg1IaWpqARkhBXXyOzD6Gm2CT+F1NQcy9B37+c879Lsk5iZMkSZRl2VIptVOWEIA9/osebVDFcZwhfsjzXIMttClBhU+BT4Ar8g6KTZCOOeARMCz6kQnS8Q34B/hD/qBrE6QjFJETA32Ru8ivWAaKbh7tXiAaisZ1JyKq6K3TNK2SjsW2Gy7VsVf8XSxAg3fa4iPKNzEATYAYH1BOTNM9AQQAL+Sfpj15HPqoRx6UNs7BM5ohj3JR+gtQn8MP1DUB/1ANoH3/UW/jLMAAkS57VeFwlgkAAAAASUVORK5CYII='></image>
+        </view>
+        <view class='cell total'>
+            <view class='f-flex'>
+                <text class='fs-28'>合计</text>
+                <text class='f-flex-fixed fs-28 num'>￥188.00</text>
+            </view>
+            <view class='f-flex'>
+                <text class='fs-28'>运费</text>
+                <text class='f-flex-fixed fs-28 num'>￥0.00</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='btn-submit'>
+    <view class='fs-34'>提交订单</view>
+</view>

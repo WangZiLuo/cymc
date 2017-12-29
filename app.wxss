@@ -68,12 +68,6 @@ text {
     align-items: center;
 }
 
-.f-flex-sb-c {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .f-flex-col {
     display: flex;
     flex-direction: column;
@@ -117,12 +111,40 @@ text {
     align-items: center;
 }
 
+.f-flex-fe-c {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fs-34 {
+    font-size: 34rpx;
+}
+
+.fs-30 {
+    font-size: 30rpx;
+}
+
 .fs-28 {
     font-size: 28rpx;
 }
 
+.fs-26 {
+    font-size: 26rpx;
+}
+
 .fs-23 {
     font-size: 24rpx;
+}
+
+.fs-16 {
+    font-size: 16rpx;
 }
 
 .border-1 {
@@ -132,4 +154,14 @@ text {
 
 .border-das {
     border: 1px dashed #333;
+}
+
+.text-ell {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.none {
+    display: none;
 }

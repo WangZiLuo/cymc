@@ -1,5 +1,5 @@
 /* pages/goods_detail/goods_detail.wxss */
-
+ 
 .container {
     padding-bottom: 100rpx;
 }

@@ -1,0 +1,28 @@
+<!--pages/addressManage/addressManage.wxml-->
+<view class="container">
+    <view class="address-list">
+        <block wx:for="{{addressList}}">
+            <view class='cell f-flex' bindtap='chooseAddress'>
+                <view class="hold f-flex-cc">
+                    <image style="width: 62rpx;height: 44rpx;" wx:if="{{item.isChecked}}"
+                        src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAWCAYAAAA4oUfxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNCODdCRDExRUEzNjExRTdBNDEzRkMwMjNFQUQwODdCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNCODdCRDEyRUEzNjExRTdBNDEzRkMwMjNFQUQwODdCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0I4N0JEMEZFQTM2MTFFN0E0MTNGQzAyM0VBRDA4N0IiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0I4N0JEMTBFQTM2MTFFN0E0MTNGQzAyM0VBRDA4N0IiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4wshUTAAAC9ElEQVR42rxWzUtUURQ/59z3ZhpNzSQzXRQkBG2ihS7aBOEiiBZBQYtiNKmQjOwDLKQCI6HABKEwwrIkHCUcF9Gf0cpNRC6irKSNlTZv3rv3dN440sxzZtJm9MF57757372/8/E75zxs7z8E6IQBiAEZIQIGpvd9hYZ32yDyOyRvDIAAwPL0B6nx0vBj4xw4ETf1vnumEcJOCH5tXpBzSI5Lglp0wUuWgyIXbBshibrbcqmNPPw8s3f2sgUbdLHmAcXYxaKptnjPrvd1QxsCjgiDhvlitjawc93BEcwjBO4I+AE0q+e0nvbK4Y8t0h3BFZvsh4atnnUCZ8IkPgHPOifsy15hPaiU1Uno07L0flbKMU9VwrQzYtaS8rwHlude4rRCJQWXTLUooUeshI4CBn2h7hObq5lzy+D1IvtFwkVYbKPrjtoJc4oDwAaoj4G6g1tINh2XndOi9lspM69FxwZcu8UhoxMvPV48CRkm+yOj+Y7nQQ/kOJS0tm7KfPVSAnCLZ1TcIDQEiZITVEST2VQ7WxULLcCJFQxScFvCfivffrI90ssE8JVzAZvqPmydDDl2Pf9DAUOmbPun6omab5XHjAqwGrmHiXsL7SdF4V750vlLDIaK+bJm0jQl7qzPD8zltV+2TNTMVR7VlgkAm+vixT6AwgEkZHsKjGqVLU6GRb7mTeLXOORSAKFCaXpVMR85YlQ2MCq6Jll+bzVcoVSkAWKC1ibvTmC9WSSezoblq0pkUpQ7LNYHiXdFgPtXS9gMiuCY3AopUCtSnh63rCA8c6eUr4G1ZEmwsYyJH8QAHAnkfLOU6niKjwAHg+GXGF8Q8CGf3sWA+1csnUUvREIZ8wdyfKuJ8bxGHgZce13KV17H5a8mSlraQ/5s8wj4rIAP/29RzFvbBTT2fcePqPx1uDkUcMGYM2Lss2J6QX5wKXOLlclYsgxPC53cjCVHulWrBGa02EZkFWgUQMYPJI7L7afU/RsyR6LtXRm/KUUX/CPAAFanIb8ecbWqAAAAAElFTkSuQmCC'
+                    ></image>
+                </view>
+                <view class='f-flex-col f-flex-fixed addressConcent'>
+                    <text class='fs-34' style="line-height: 50rpx;">{{item.name}} {{item.phone}}</text>
+                    <text class='fs-28 text-ell' style="width: 558rpx;line-height: 44rpx;color: #999;">{{item.address}}</text>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class='address-append cell f-flex' data-page="appendAddress" bindtap='toLink'>
+        <view class="hold f-flex-cc">
+            <image style="width: 48rpx;height: 48rpx;"
+                src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo5OGY4Y2UwMC0wZjk3LTQzMTktYWU1OC1iMDNiMDE5ODk5ZmMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjdBQUNBNzhFQUE4MTFFN0ExNzBFRjk5MDI0MTIyQzYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjdBQUNBNzdFQUE4MTFFN0ExNzBFRjk5MDI0MTIyQzYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6N2I3Y2M4ZGItMzA1NS1mZjQ1LTg0NmUtNmNjMjhiMjRlMjVkIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk4ZjhjZTAwLTBmOTctNDMxOS1hZTU4LWIwM2IwMTk4OTlmYyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph6XtBUAAACfSURBVHjaYvz//z8DuSC1wwtTcHbFNrIN/PXrFxPDYAJsbGyDy0FAMOqgUQeNOmjUQaMOGnXQqINGHTTqoEEGWA5d2P7txxcqmrjjxGqy9XpYhLKcuXHk+oPzVHTQ2gPzKXHQaBoaddDwy/byEipka8aaPTUVDClxEOOg6tuPpqFRB406aNRBow4addCog0YdNOqgUQcNMQf9+vULIMAAA3glov8OM/0AAAAASUVORK5CYII='
+            ></image>
+        </view>
+        <view class='f-flex-col f-flex-fixed addressConcent'>
+            <text class='fs-34' style="line-height: 95rpx;">新增地址</text>
+        </view>
+    </view>
+</view>

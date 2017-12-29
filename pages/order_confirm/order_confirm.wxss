@@ -3,8 +3,7 @@
 .m-goodList-row {
     box-sizing: border-box;
     width: 100%;
-    border-top: 1px solid #cdcdcd;
-    border-bottom: 1px solid #cdcdcd;
+    border: 1px solid #cdcdcd;
 }
 
 .address-confirm {
@@ -21,7 +20,7 @@
     height: 60rpx;
 }
 
-.address-confirm .link {
+.address-confirm  .link {
     width: 17rpx;
     height: 33rpx;
 }
@@ -41,13 +40,12 @@
     box-sizing: border-box;
     margin-top: 14rpx;
     margin-bottom: 14rpx;
-    padding-left: 42rpx;
-    padding-right: 42rpx;
+    padding-left: 49rpx;
+    padding-right: 49rpx;
     background-color: #fff;
 }
 
 .cart-item .goodsImg {
-    padding-left: 34rpx;
     padding-right: 20rpx;
     width: 200rpx;
     height: 200rpx;
@@ -73,4 +71,115 @@
     padding-right: 18rpx;
     font-size: 22rpx;
     color: #999;
+}
+
+.order-choose {
+    padding-bottom: 60rpx;
+    margin-bottom: 180rpx;
+    width: 100%;
+}
+
+.cell {
+    /* width: 100%; */
+    padding-left: 49rpx;
+    padding-right: 49rpx;
+    border: 1px solid #cdcdcd;
+}
+
+.cell text {
+    line-height: 98rpx;
+}
+
+.fs-30 {
+    margin-right: 54rpx;
+}
+
+.blank {
+    margin-bottom: 20rpx;
+}
+
+.total {
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.total .num {
+    text-align: right;
+    color: #648749;
+}
+
+.total .fs-28 {
+    line-height: 48rpx;
+}
+
+.btn-submit {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 40rpx 50rpx;
+    width: 100%;
+    background-color: #fff;
+}
+
+.btn-submit view {
+    width: 100%;
+    line-height: 100rpx;
+    text-align: center; 
+    color: #fff;
+    background-color: #648749;
+}
+
+.address-append {
+    padding-top: 28rpx;
+    padding-bottom: 28rpx;
+    width: 100%;
+}
+
+.address-append .m-line {
+    position: relative;
+    height: 24rpx;
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 4rpx;
+    background-color: #648749;
+}
+
+.half {
+    width: 50%;
+    left: 50%;
+    margin: auto 0;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    margin: auto;
+    width: 24rpx;
+    height: 24rpx;
+    background-color: #648749;
+    border-radius: 50%;
+}
+
+.hollow {
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 3px solid #648749;
+}
+
+.order-inp-list {
+    padding-top: 48rpx;
+    padding-bottom: 30rpx;
 }

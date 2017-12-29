@@ -1,6 +1,6 @@
 <!--pages/goods_detail/goods_detail.wxml-->
-<view class="container"> 
-    <view class='m-swiper'> 
+<view class="container">
+    <view class='m-swiper'>
         <swiper indicator-dots="{{true}}"
             autoplay="{{false}}" interval="{{5000}}" duration="{{500}}" bindchange="listenSwiper">
                 <block wx:for="{{goodsInfo.banner}}" wx:key="index">

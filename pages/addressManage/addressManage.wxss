@@ -1,0 +1,27 @@
+/* pages/addressManage/addressManage.wxss */
+
+.cell {
+    padding-bottom: 36rpx;
+    padding-right: 42rpx;
+}
+
+.address-list {
+    width: 100%;
+    padding-top: 36rpx;
+    margin-bottom: 13rpx;
+}
+
+.hold {
+    width: 150rpx;
+    height: 94rpx;
+}
+
+.addressConcent text{
+    width: 100%;
+    text-align: left;
+}
+
+.address-append {
+    box-sizing: border-box;
+    width: 100%;
+}

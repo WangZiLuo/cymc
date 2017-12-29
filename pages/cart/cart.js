@@ -18,7 +18,7 @@ Page({
                 amount: 3,
                 norm: ['6寸', '收货时间: 10:00-11:30'],
                 check: 0,
-                txtStyle: ''
+                txtStyle: ''      //右滑删除 内联样式控制动画
             },
             {
                 name: '抹茶千层',

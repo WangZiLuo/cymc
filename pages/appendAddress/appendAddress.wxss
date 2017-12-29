@@ -1,0 +1,23 @@
+/* pages/appendAddress/appendAddress.wxss */
+
+.cell {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+    border: 1px solid #cdcdcd;
+    border-bottom: 0;
+}
+
+.cell text {
+    padding-right: 31rpx;
+    line-height: 98rpx;
+}
+
+.section textarea {
+    box-sizing: border-box;
+    padding: 20rpx 20rpx 20rpx 0;
+    height: 198rpx;
+    width: 540rpx;
+    font-size: 28rpx;
+}

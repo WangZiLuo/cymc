@@ -40,6 +40,30 @@
 					"name": "订单确认",
 					"pathName": "pages/order_confirm/order_confirm",
 					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "地址管理",
+					"pathName": "pages/addressManage/addressManage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "添加地址",
+					"pathName": "pages/appendAddress/appendAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "优惠劵",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/myOrder/myOrder",
+					"query": ""
 				}
 			]
 		}

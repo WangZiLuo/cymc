@@ -1,0 +1,52 @@
+<!--pages/myOrder/myOrder.wxml-->
+<view class='m-bd'>
+    <view class="swiper-tab f-flex">
+        <view class="swiper-tab-list fs-23 {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</view>
+        <view class="swiper-tab-list fs-23 {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</view>
+        <view class="swiper-tab-list fs-23 {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">进行中</view>
+        <view class="swiper-tab-list fs-23 {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">已完成</view>
+    </view>
+     <view class='tab-content'> 
+         <block wx:for="{{orderList}}" wx:key="index">
+            <scroll-view scroll-y="true" style='height: 1073rpx;' data-type="{{index}}" lower-threshold="50" bindscrolltolower='loadMore' hidden="{{ !(index==currentTab) }}">
+                <block wx:for="{{item.list}}" wx:key="index">
+                    <view class="item-ans">
+                        <text class='title fs-23'>{{item.status}}</text>
+                        <block wx:for="{{item.goodsList}}" wx:key="index">
+                            <view class='hold f-flex' data-index='{{index}}'>
+                                <image src='{{item.imgUrl}}' class='goodsImg'>
+                                </image>
+                                <view class='info f-flex-fixed'>
+                                    <view class='f-flex-wrap'>
+                                        <text class='fs-23' style='line-height: 47rpx;'>{{item.name}}</text>
+                                        <text class='fs-16' style='line-height: 47rpx;'>￥{{item.price}}</text>
+                                    </view>
+                                    <view class='norm f-flex-wrap'>
+                                        <text class='fs-16' style='line-height: 42rpx;color: #999;'>{{item.norm[0]}}</text>
+                                        <text class='fs-16' style='line-height: 42rpx;'>X{{item.amount}}</text>
+                                    </view>
+                                </view>
+                            </view>
+                        </block>
+                        <view class='bottom f-flex-wrap'>
+                            <view>
+                                <text class='fs-23' style='color: #999;margin-right: 24rpx;'>实付款</text><text class='fs-23'>￥ </text>
+                            </view>
+                            <view class='btn-hd f-flex-sa-c' wx:if="{{item.status==1}}">
+                                <view class='btn border-1 fs-23 cancel'>取消订单</view><view class='btn border-1 fs-23 color'>付款</view>
+                            </view>
+                            <view class='btn-hd f-flex-fe-c' wx:if="{{item.status==2}}">
+                                <view class='btn border-1 fs-23 color'>确认送达</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <view class='loadingConcent f-flex-wrap' hidden='{{!load.isLoad}}'>
+                    <image class='rotate'
+                        src='/image/assets/load.png'
+                    ></image>
+                </view>
+            </scroll-view>
+        </block> 
+     </view> 
+</view>
