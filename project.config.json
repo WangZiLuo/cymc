@@ -20,8 +20,12 @@
 			"current": -1,
 			"list": []
 		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
-			"current": 2,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -63,6 +67,36 @@
 					"id": -1,
 					"name": "我的订单",
 					"pathName": "pages/myOrder/myOrder",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "订单详情",
+					"pathName": "pages/order_detail/order_detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "伴手礼",
+					"pathName": "pages/gift/gift",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "蛋糕",
+					"pathName": "pages/cake/cake",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "周边",
+					"pathName": "pages/circum/circum",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/ucenter/ucenter",
 					"query": ""
 				}
 			]

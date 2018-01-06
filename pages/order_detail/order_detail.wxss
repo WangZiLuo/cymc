@@ -1,0 +1,87 @@
+/* pages/order_detail/order_detail.wxss */
+
+page {
+    background-color: #f2f2f2;
+}
+
+.m-title-states {
+    box-sizing: border-box;
+    padding-left: 20rpx;
+    width: 100%;
+    line-height: 100rpx;
+    text-align: left;
+    color: #fff;
+    background-color: #628448;
+}
+
+.m-address {
+    width: 100%;
+    padding-top: 12rpx;
+    padding-bottom: 12rpx;
+    background-color: #fff;
+}
+
+.address image {
+    padding-left: 25rpx;
+    padding-right: 25rpx;
+    width: 30rpx;
+    height: 45rpx;
+}
+
+.address-txt text {
+    box-sizing: border-box;
+    padding-right: 20rpx;
+    width: 100%;
+    line-height: 38rpx;
+    color: #999;
+}
+
+.blank {
+    margin-bottom: 40rpx;
+}
+
+.goods-info {
+    box-sizing: border-box;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    margin-bottom: 40rpx;
+    width: 100%;
+    background-color: #fff;
+}
+
+.goods-info .title {
+    display: block;
+    width: 100%;
+    line-height: 76rpx;
+    text-align: right;
+}
+
+.goods-info .goodsImg {
+    margin-right: 30rpx;
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.goods-info .hold {
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    margin-bottom: 13rpx;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.goods-info text {
+    color: #333;
+}
+
+.additional {
+    line-height: 63rpx;
+}
+
+.order-footer {
+    box-sizing: border-box;
+    padding: 12rpx 20rpx;
+    width: 100%;
+    line-height: 40rpx;
+    background-color: #fff;
+}
+

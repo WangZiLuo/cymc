@@ -1,5 +1,5 @@
 <!--pages/cart/cart.wxml-->
-<view class="container"> 
+<view class="container">
     <view class='m-cart-row'>
         <block wx:for='{{cartList}}' wx:key='{{index}}'>
             <view class='cart-item f-cb'>

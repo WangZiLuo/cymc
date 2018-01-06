@@ -1,0 +1,58 @@
+<!--pages/order_detail/order_detail.wxml-->
+<view class="container">
+    <text class='m-title-states fs-26'>{{states[2]}}</text>
+    <view class='m-address blank'>
+        <view class='address f-flex'>
+            <image src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg3Njk4QkVERTk0RjExRTdCMjQzQTU2OTJFNTNENjNBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg3Njk4QkVFRTk0RjExRTdCMjQzQTU2OTJFNTNENjNBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODc2OThCRUJFOTRGMTFFN0IyNDNBNTY5MkU1M0Q2M0EiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODc2OThCRUNFOTRGMTFFN0IyNDNBNTY5MkU1M0Q2M0EiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5QCki5AAACf0lEQVR42pSWaYjNYRSH770uhUbXkkmELJOSJUQSkkziAxJhfJCJaCxNKD5pJEsxmZElH6RkCYOEqFGUJcMNyfaFRtYPkyUijPGc+l39O713O/U0zbv8/u97znvOufF0Oh0LWDuYARUwBrpCHL7CYzgJDfDTb0wExEzoHpyA9nAI1kM17IUv+mvCC/3mpPt/BRyAszAbXsfC1h12wHEog5qQ4DrYBYvhWCy3tcAyOAMXIaUb/L/yKNgJqwsQi9pVWACroNwG4gqKTfzQNX1wJsJMuAXnswjvgal2MDvheJgEW92iEkWyEaZDj8h4Z7e2DgbDnKRO9QGeuEUW3Ql6Ng8j45thBEyLjL2CJhNMyH9NunLGBuhUlU7M7DSM082idsf2JXSVd25yKHyW37zd1XMa7cY/WpBN8Dd0dJMm1gm6BARTGm9x46bRZoJvoK+bfAC/YE1AsFKCN9x4b9uTVJpVKXLfNflNYpYxpbBfH1gCK2FtwE0j4bmd8DZ0gz5uwTlFskzv7zJMVv7Wu7U9YRjcTMrJ72EKvHALGxXRXnrkb+FPwA3DoRWuJVSCLqlUhaxVfm7OIma2SDdtzuTyYT3WsbHirVSpeSRaHB7BSwWnWLNA/YULUcE22C2H9y9CLKXiezRTvaMV28r6M1hehOBc6AD7Qi3AMmaLrj2oALESFYp6BSzYUxrky20FCG5UMtTma1KbYJZqZDbrp0yyD3/KJ3hFEavVYw7ZdngayJigYKZhDdFpvc1XMKrk95xtNGNW75a6ohtTw69Tz74f2pjM4adTgbEafaQ626ZkEW+uQj8Eyn0gCvGht4FqWgfheq6FhQrOUyPbkG/hPwEGACpQi83A+a7EAAAAAElFTkSuQmCC'></image>
+            <view class='address-txt f-flex-fixed f-flex-col-cs fs-23'>
+                <text class='text-ell'>浙江省杭州市下城区蓝图创客基地6幢</text>
+                <text class='text-ell'>收件人: 跳跳糖 13566666666</text>
+            </view>
+        </view>
+    </view>
+    <view class='goods-info'>
+        <block wx:for='{{request.goodsInfo}}'>
+            <view class='hold f-flex'>
+                <image src='{{item.imgUrl}}' class='goodsImg'>
+                </image>
+                <view class='info f-flex-fixed'>
+                    <view class='f-flex-wrap'>
+                        <text class='fs-23' style='line-height: 47rpx;'>{{item.name}}</text>
+                        <text class='fs-16' style='line-height: 47rpx;'>￥{{item.price}}</text>
+                    </view>
+                    <view class='norm f-flex-wrap'>
+                        <text class='fs-16' style='line-height: 42rpx;color: #999;'>{{item.norm[0]}}</text>
+                        <text class='fs-16' style='line-height: 42rpx;'>X{{item.amount}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class='additional fs-23'>
+            <view class='fare f-flex-wrap'>
+                <text>运费</text>
+                <text>包邮</text>
+            </view>
+            <view class='discount f-flex-wrap'>
+                <text>优惠</text>
+                <text>￥-10</text>
+            </view>
+            <view class='total f-flex-wrap'>
+                <text>合计</text>
+                <text>￥188</text>
+            </view>
+        </view>
+    </view>
+    <view class='order-footer fs-23'>
+        <view class='orderNum f-flex-fs-c'>
+            <text>订单编号:</text>
+            <text>1234567899000</text>
+        </view>
+        <view class='orderTime f-flex-fs-c'>
+            <text>下单时间:</text>
+            <text>2018年1月1日 14:01</text>
+        </view>
+        <view class='order-btn'>
+
+        </view>
+    </view>
+</view>

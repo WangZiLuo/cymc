@@ -11,7 +11,11 @@
         "pages/addressManage/addressManage",
         "pages/appendAddress/appendAddress",
         "pages/coupon/coupon",
-        "pages/myOrder/myOrder"
+        "pages/myOrder/myOrder",
+        "pages/order_detail/order_detail",
+        "pages/gift/gift",
+        "pages/cake/cake",
+        "pages/circum/circum"
     ],
     "window": {
         "backgroundTextStyle": "light",

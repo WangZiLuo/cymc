@@ -1,0 +1,65 @@
+/* pages/cake/cake.wxss */
+
+.m-banner {  
+    width: 100%;
+}
+
+.m-columnItem {
+    box-sizing: border-box;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    width: 100%;
+}
+
+.goods {
+    padding-right: 13rpx;
+    margin-top: 20rpx;
+    border: 1rpx solid #dcdcdc;
+}
+
+.goods text {
+    width: 100%;
+    line-height: 68rpx;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+}
+
+.goods .content {
+    font-weight: normal;
+}
+
+.f-flex-col .title {
+    box-sizing: border-box;
+    padding-left: 20rpx;
+}
+
+.f-flex-col-reverse .title {
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 20rpx;
+}
+
+.f-flex-col .hold text {
+    box-sizing: border-box;
+    padding-right: 30rpx;
+    text-align: right;
+}
+
+.f-flex-col-reverse .hold text {
+    box-sizing: border-box;
+    padding-left: 30rpx;
+    text-align: left;
+}
+
+.m-rowItem {
+    box-sizing: border-box;
+    padding: 45rpx 45rpx 0 ;
+    margin-top: 30rpx;
+    width: 100%;
+    border: 1rpx solid #dcdcdc;
+}
+
+.m-rowItem view {
+    margin-bottom: 28rpx;
+}

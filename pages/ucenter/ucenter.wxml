@@ -1,2 +1,11 @@
 <!--pages/ucenter/ucenter.wxml-->
-<text>pages/ucenter/ucenter.wxml</text>
+<view class="container">
+    <view class='avatar f-flex-wrap'>
+        <text class='name f-flex-fixed'>{{userInfo.nickName}}</text>
+        <view class='avatarBox'>
+            <image style='width: 150rpx;height: 150rpx;'
+                src='{{userInfo.avatarUrl}}'
+            ></image>
+        </view>
+    </view>
+</view>

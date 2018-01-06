@@ -1,0 +1,22 @@
+<!--pages/gift/gift.wxml-->
+<view class="container"> 
+    <view class='m-banner'>
+        <image style='width: 750rpx;height: 470rpx;'
+            src='{{request.banner}}'
+        ></image>
+    </view>
+    <view class='m-columnItem'>
+        <block wx:for='{{request.giftList}}' wx:key='{{index}}'>
+            <view class="goods {{index%2==0?'f-flex':'f-flex-reverse'}}">
+                <image style='width: 380rpx;height: 260rpx;'
+                    src='{{item.imgUrl}}'
+                ></image>
+                <view class='f-flex-col f-flex-fixed hold'>
+                    <text class='title fs-23'>{{item.title}}</text>
+                    <text class='content fs-23'>{{item.content}}</text>
+                    <text class='fs-23'>了解更多</text>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

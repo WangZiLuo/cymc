@@ -75,6 +75,13 @@ text {
     justify-content: space-between;
 }
 
+.f-flex-col-reverse {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .f-flex-col-cs {
     display: flex;
     flex-direction: column;
@@ -114,6 +121,12 @@ text {
 .f-flex-fe-c {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.f-flex-sb-c {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 

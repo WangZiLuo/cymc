@@ -1,0 +1,19 @@
+/* pages/circum/circum.wxss */
+
+.m-banner, .rowItem, .imgList, .rowItem  {  
+    width: 100%;
+}
+
+.small {
+    width: 250rpx;
+    height: 250rpx;
+}
+
+.big {
+    width: 500rpx;
+    height: 500rpx;
+}
+
+.rowItem view {
+    float: left;
+}

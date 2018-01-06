@@ -1,0 +1,35 @@
+/* pages/gift/gift.wxss */
+
+.m-banner { 
+    width: 100%;
+}
+
+.m-columnItem {
+    box-sizing: border-box;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    width: 100%;
+}
+
+.goods {
+    padding: 39rpx 13rpx;
+    margin-top: 20rpx;
+    border: 1rpx solid #dcdcdc;
+}
+
+.hold {
+    padding-left: 42rpx;
+}
+
+.goods text {
+    width: 100%;
+    line-height: 68rpx;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+}
+
+.goods .content {
+    font-weight: normal;
+    color: #333;
+}
