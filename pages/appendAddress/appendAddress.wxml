@@ -1,23 +1,33 @@
 <!--pages/appendAddress/appendAddress.wxml-->
 <view class="container">
-    <view class='cell f-flex blank'>
-        <text class='fs-28'>收货人</text>
-        <input class='f-flex-fixed fs-28' bindinput="bindKeyInput" placeholder="名字" />
+    <view class='cell f-flex blank' style='margin-top: 10rpx;'>
+        <text class='fs-28' style='width: 111rpx'>收货人</text>
+        <input class='f-flex-fixed fs-28' data-type="name" bindinput="bindKeyInput" placeholder="名字" value='{{htmlData.name}}' />
     </view>
     <view class='cell f-flex blank'>
         <text class='fs-28'>联系电话</text>
-        <input type='number' class='f-flex-fixed fs-28' bindinput="bindKeyInput" placeholder="手机或固定电话" />
+        <input type='number' maxlength="11" class='f-flex-fixed fs-28' data-type="phone" bindinput="bindKeyInput" placeholder="手机或固定电话" value='{{htmlData.phone}}' />
     </view>
     <view class="cell f-flex blank">
         <text class='fs-28'>选择地区</text>
-        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-            <view class="picker" style='font-size: 26rpx;color: #333;'>
-                {{region[0]}} {{region[1]}} {{region[2]}}
+        <picker bindchange="bindPickerChange" value="{{0}}" range="{{ ['杭州市'] }}">
+            <view class="picker" style='padding-right: 5px;font-size: 26rpx;color: #333;'>
+                {{'杭州市'}}
+            </view>
+        </picker>
+        <picker bindchange="bindPickerChange" value="{{picker.index}}" range="{{picker.array}}">
+            <view class="picker" style='padding-left: 5px;font-size: 26rpx;color: #333;'>
+                {{picker.array[picker.index]}}
             </view>
         </picker>
     </view>
     <view class="cell f-flex section">
-        <text class='fs-28'>选择地区</text>
-        <textarea bindblur="bindTextAreaBlur" placeholder="请填写详细地址,不少于5个字" />
+        <text class='fs-28'>详细地区</text>
+        <textarea maxlength="50" data-type="detaile" bindinput="bindKeyInput" placeholder="请填写详细地址,不少于5个字" value='{{htmlData.detaile}}' />
+    </view>
+    <view class='btn-hold f-flex'>
+        <view class='btn confirm fs-32' bindtap='submit'>
+            确定
+        </view>
     </view>
 </view>

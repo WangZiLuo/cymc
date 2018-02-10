@@ -1,6 +1,6 @@
 <!--index.wxml--> 
 <view class="container">  
-    <view class="m-indexFloor"> 
+    <view class="m-indexFloor">  
         <swiper indicator-dots="{{true}}"
             autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
                 <block wx:for="{{imgUrls}}" wx:key="index">
@@ -10,7 +10,7 @@
                 </block>
         </swiper>
     </view>
-    <view class="m-indexFloor f-flex" bindtap="toShop">
+    <view class="m-indexFloor f-flex" bindtap="toShop"> 
         <view class='m-shop-title f-flex-cc'>
             <div class="content">
                 <p>onlinestore.</p>

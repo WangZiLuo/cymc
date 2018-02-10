@@ -1,13 +1,29 @@
 /* pages/home/home.wxss */
 
-.m-home-logo {
-    padding-top: 29rpx;
+.m-home-banner {
     width: 100%;
+    height: 600rpx;
 }
 
-.m-home-logo image {
-    width: 160rpx;
-    height: 88rpx;
+.m-home-banner image {
+    width: 750rpx;
+    height: 600rpx;
+}
+swiper {
+    width: 100%;
+    height: 100%;
+}
+
+swiper .wx-swiper-dot {
+    width: 20rpx;
+    height: 20rpx;
+    background-color: #fff;
+    background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVENERFODgyMDIzQTExRThBOUYzODUzQjlEQUY0MjlCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVENERFODgzMDIzQTExRThBOUYzODUzQjlEQUY0MjlCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NUQ0REU4ODAwMjNBMTFFOEE5RjM4NTNCOURBRjQyOUIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NUQ0REU4ODEwMjNBMTFFOEE5RjM4NTNCOURBRjQyOUIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5/seA7AAABYUlEQVR42qSVT0sCURTFp1HaRPv+LV20rxYtc9VCwUCDvkLUwhZJYAQWQYrUor5EYtm/tV/ACFzPsvALtCmQOhfOwDgd7WUXfjDce97xeee9OxPr256KSZAjq2AOfIJX8AJuwR1zA5EUZhugClLiRxbJFghACdxERX7kOQHOKEh5v4dpmlyTUDs8Bfve3yNcU4ruMD+mWdQ0Hxpab86HCB9BGkyTNHMqLszLDAtgQQiOQBa0wTtpM3co9PNg0+fRiMcTqIz4iyfgQeRzZrgiCnWHvqk2LZvhjCh0HAyVZtZXp90xvlTSDHtq6w6GqlU9M+yKQtHBUGk6ZtgSBTsa5RFmZWri0TLDBqdIPI55NNbAFLHne9bi8WZeSb6UPXAtRBniObbgI7zLtsvaP+5yjR4D4+sAXI5hdsW1P+ZhH+xyagQORgHnwA7XDp3YTb6MAqf3Ei9+2PhnfgIa6lJ8CzAATotEJaFrty0AAAAASUVORK5CYII=') no-repeat center/cover;
+}
+
+swiper .wx-swiper-dot-active {
+    background-image:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQxNzI3NTM2MDIzQTExRTg4MjgwQjgwMTA1NTA4NjBEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjQxNzI3NTM3MDIzQTExRTg4MjgwQjgwMTA1NTA4NjBEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDE3Mjc1MzQwMjNBMTFFODgyODBCODAxMDU1MDg2MEQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NDE3Mjc1MzUwMjNBMTFFODgyODBCODAxMDU1MDg2MEQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5kRu/JAAABN0lEQVR42mL8//8/AzHAM5uRCUgtAOKE7VP//yNGDxMD8SAGiGOhNFGAkRiXA13NCaRuArEsED8GYnWg679Ty+V5UIMZoHQeVVwOdLUwkLoLxPxIwh+BWBno+reUurwGzWAGKL+GIpcDXa0EpG4AMSsW6d9ArAF0/T1yXd6Kw2AGqHgbWS4HutoUSJ0iItjMgK4/TarLu4lMSd0kBQvQ1T5Ayp5Iw+2B6n2JChagQhYgdRGItUjIvdeAWB8YPH8IuTyBRIMZoOoT8Loc6GpuIHUbiCUZSAcvgFgF6PqvuFxeRKbBICAB1Y/pcqCrxaDZnIeBfPAF6vqX6C6vp9BgBqj+OhSXA12tBo1xZgbKwV9QBANdfwvm8nYqGcwANacD7HKPLAZrIH2EgfrABuTyLgbagC6AAAMAO0JeR6+sD0UAAAAASUVORK5CYII=');
+    border-radius: 0;
 }
 
 .m-topColumn, .topNav {
@@ -16,6 +32,7 @@
 }
 
 .topNav{
+    padding-top: 28px;
     padding-left: 50rpx;
     padding-right: 50rpx;
 }
@@ -28,7 +45,7 @@
 .m-topColumn .topNav .aLink {
     padding-top: 23rpx;
     width: 1em;
-    font-size: 20rpx;
+    font-size: 22rpx;
     color: #000;
 }
 
@@ -46,7 +63,7 @@
 }
 
 .m-subColumn .column_title .title {
-    font-size: 28rpx;
+    font-size: 30rpx;
     line-height: 36rpx;
     color: #000;
 }
@@ -91,7 +108,7 @@
 }
 
 .m-columnItem-fir .nickname {
-    font-size: 16rpx;
+    font-size: 18rpx;
     padding-right: 21rpx;
     width: 100%;
     line-height: 25rpx;
@@ -121,7 +138,7 @@
 }
 
 .m-columnItem-sec .nickname {
-    font-size: 16rpx;
+    font-size: 18rpx;
     line-height: 25rpx;
 }
 
@@ -137,14 +154,14 @@
 .m-columnItem-thd .name {
     box-sizing: border-box;
     width: 100%;
-    font-size: 28rpx;
+    font-size: 30rpx;
     line-height: 48rpx;
 }
 
 .m-columnItem-thd .nickname {
     box-sizing: border-box;
     width: 100%;
-    font-size: 24rpx;
+    font-size: 18rpx;
     line-height: 34rpx;
 }
 

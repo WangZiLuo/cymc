@@ -1,13 +1,13 @@
 <!--pages/circum/circum.wxml-->
-<view class="container">
-    <view class='m-banner'>
-        <image style='width: 750rpx;height: 470rpx;' src='{{request.banner}}'></image>
+<view class="container"> 
+    <view class='m-banner' style='width: 750rpx;height: 470rpx;'>
+        <image style='width: 100%;height: 100%;' src='{{request.banner}}'></image>
     </view>
     <view class='imgList'>
-        <block wx:for="{{request.rowList}}" wx:key="{{index}}">
-            <view class="rowItem {{index%2!=0?'f-flex-wrap':''}}" wx:if="{{index%2==0}}">
+        <block wx:for="{{request.circumList}}" wx:key="{{index}}">
+            <view class="rowItem {{index%2!=0?'f-flex-wrap':''}}" wx:if="{{index%2==0}}"> 
                 <block wx:for="{{item}}" wx:key="{{index}}">
-                    <view style='width: 250rpx;height: 250rpx;'>
+                    <view style='width: 250rpx;height: 250rpx;' data-id='{{ item.id }}' bindtap="toGoodsDetail">
                         <image style='width: 100%;height: 100%;'
                             src='{{item.imgUrl}}'
                         ></image>
@@ -15,14 +15,14 @@
                 </block>
             </view>
             <view class="rowItem {{ ((index-1)/2)%2==0?'f-flex-wrap':'f-flex-reverse'}}" wx:if="{{index%2!=0}}">
-                <view style='width: 500rpx;height: 500rpx;'>
+                <view style='width: 500rpx;height: 500rpx;' data-id='{{ item[0].id }}' bindtap="toGoodsDetail">
                     <image style='width: 100%;height: 100%;'
                         src='{{item[0].imgUrl}}'
                     ></image>
                 </view>
                 <view class='f-flex-col'>
                     <block wx:for="{{item}}" wx:key="{{index}}">
-                        <view style='width: 250rpx;height: 250rpx;' wx:if="{{index!=0}}">
+                        <view style='width: 250rpx;height: 250rpx;' wx:if="{{index!=0}}" data-id='{{ item.id }}' bindtap="toGoodsDetail">
                             <image style='width: 100%;height: 100%;'
                                 src='{{item.imgUrl}}'
                             ></image>

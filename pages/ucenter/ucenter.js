@@ -24,7 +24,12 @@ Page({
             }
         })
     },
-
+    toLink(e) {
+        const page = e.currentTarget.dataset.page
+        wx.navigateTo({
+            url: '../' + page + '/' + page
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

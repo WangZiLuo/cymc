@@ -21,12 +21,16 @@
     width: 100%;
     line-height: 68rpx;
     text-align: left;
-    font-weight: bold;
     color: #000;
 }
 
 .goods .content {
+    width: 186rpx;
+    height: 44rpx;
+    line-height: 22rpx;
     font-weight: normal;
+    color: #000;
+    overflow: hidden;
 }
 
 .f-flex-col .title {
@@ -40,10 +44,19 @@
     padding-right: 20rpx;
 }
 
+.f-flex-col .hold {
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+}
+
 .f-flex-col .hold text {
     box-sizing: border-box;
     padding-right: 30rpx;
     text-align: right;
+}
+
+.f-flex-col-reverse .hold {
+    align-items: flex-start;
 }
 
 .f-flex-col-reverse .hold text {

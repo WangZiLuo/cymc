@@ -1,4 +1,5 @@
 // pages/gift/gift.js
+let app = getApp()
 Page({ 
 
     /**
@@ -8,30 +9,7 @@ Page({
         request: {
             banner: '/image/assets/detail-img.png',
             giftList: [
-                {
-                    id: 11,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: '初壹订制',
-                    content: '初壹特制抹茶曲奇订制'
-                },
-                {
-                    id: 12,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: '初壹订制',
-                    content: '初壹特制抹茶曲奇订制'
-                },
-                {
-                    id: 13,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: '初壹订制',
-                    content: '初壹特制抹茶曲奇订制'
-                },
-                {
-                    id: 14,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: '初壹订制',
-                    content: '初壹特制抹茶曲奇订制'
-                }
+               
             ]
         }
     },
@@ -40,9 +18,41 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.initData()
     },
-
+    initData() {
+        let _this = this
+        wx.request({
+            url: app.globalData.subDomain + '/API/ProgramApi.aspx',
+            data: {
+                dogetproductdetail: '1',
+                ptid: '2'
+            },
+            success: function (res) {  
+                if (res.data.msg == 3) {
+                    res.data.list.forEach((ele) => {
+                        let giftListObj = {
+                            id: ele.wpid,
+                            imgUrl: ele.wptwopic,
+                            title: ele.wpvicename,
+                            name: ele.wpname,
+                            content: ele.wpdescribe
+                        }
+                        _this.data.request.giftList.push(giftListObj)
+                    })
+                    _this.setData({
+                        'request.giftList': _this.data.request.giftList
+                    })
+                }
+            }
+        })
+    },
+    toGoodsDetail(e) {
+        const parms = e.currentTarget.dataset.id;
+        wx.navigateTo({
+            url: '../goods_detail/goods_detail?wpid=' + parms
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -57,6 +67,7 @@ Page({
         wx.setNavigationBarTitle({
             title: '伴手礼订制',
         })
+        
     },
 
     /**

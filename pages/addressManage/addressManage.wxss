@@ -1,6 +1,6 @@
 /* pages/addressManage/addressManage.wxss */
 
-.cell {
+.cell { 
     padding-bottom: 36rpx;
     padding-right: 42rpx;
 }
@@ -24,4 +24,38 @@
 .address-append {
     box-sizing: border-box;
     width: 100%;
+}
+
+.address-list .hold {
+    width:100%;
+    position:relative;
+    height:130rpx;
+    background-color:#fff;
+    overflow:hidden;
+}
+
+.hold>.cell {
+    box-sizing:border-box;
+    position:absolute;
+    z-index:5;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    transition:left 0.15s ease-in-out;
+    background-color:#fff;
+}
+
+.slipDelete {
+    position:absolute;
+    top:0;
+    right:0;
+    width:100rpx;
+    height:130rpx;
+    background-color:#648749;
+    font-size:24rpx;
+    line-height:130rpx;
+    text-align:center;
+    color:#fff;
 }

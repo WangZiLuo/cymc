@@ -62,9 +62,11 @@ page {
 
 .item-ans .title {
     display: block;
+    padding-right: 12rpx;
     width: 100%;
     line-height: 76rpx;
     text-align: right;
+    border-bottom: 1px solid #dcdcdc
 }
 
 .item-ans .goodsImg {
@@ -132,4 +134,11 @@ scroll-view {
     to {
         transform: rotate(360deg);
     }
+}
+
+.noData {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    width: 100%;
+    text-align: center;
 }

@@ -1,32 +1,30 @@
 <!--pages/cake/cake.wxml-->
 <view class="container">
-    <view class='m-banner'>
-        <image style='width: 750rpx;height: 470rpx;' src='{{request.banner}}'></image>
+    <view class='m-banner' style='width: 750rpx;height: 470rpx;'>
+        <image style='width: 100%;height: 100%;' src='{{request.banner}}'></image>
     </view>
     <view class='m-columnItem'>
-        <block wx:for='{{request.giftList}}' wx:key='{{index}}'>
-            <view class="goods {{index%2==0?'f-flex':'f-flex-reverse'}}">
-                <view class='f-flex-cc' style='width: 393rpx;height: 338rpx;'>
-                    <!-- <img wx:src='{{item.imgUrl}}'
-                    ></img> -->
-                    <image style='width: 380rpx;height: 260rpx;' src='{{item.imgUrl}}'></image>
+        <block wx:for='{{request.cakeList}}' wx:key='{{index}}'> 
+            <view class="goods {{index%2==0?'f-flex':'f-flex-reverse'}}" data-id='{{ item.id }}' bindtap="toGoodsDetail">
+                <view class='f-flex-cc' style='width: 393rpx;height: 300rpx;'>
+                    <image style='width: 376rpx;height: 242rpx;' src='{{item.imgUrl}}'></image>
                 </view>
                 <view class="{{index%2==0?'f-flex-col':'f-flex-col-reverse'}} f-flex-fixed">
-                    <text class='title fs-23'>{{item.title}}</text>
+                    <text class='title fs-32'>{{item.title}}</text>
                     <view class='hold f-flex-col' style='width: 100%;'>
-                        <text class='fs-30'>{{item.name}}</text>
+                        <text class='fs-32'>{{item.name}}</text>
                         <text class='content fs-16'>{{item.content}}</text>
                     </view>
                 </view>
             </view>
         </block>
-        <view class='m-rowItem f-flex-wrap'>
-            <block wx:for='{{request.rowList}}'>
+        <!-- <view class='m-rowItem f-flex-wrap'>
+            <block wx:for='{{request.rowList}}' wx:key='{{index}}'>
                 <view>
                     <image style='width: 180rpx;height: 180rpx;' src='{{item.imgUrl}}'></image>
                 </view>
             </block>
-        </view>
+        </view> -->
     </view>
 
 </view>

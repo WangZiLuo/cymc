@@ -1,11 +1,34 @@
 <!--pages/ucenter/ucenter.wxml-->
 <view class="container">
     <view class='avatar f-flex-wrap'>
-        <text class='name f-flex-fixed'>{{userInfo.nickName}}</text>
+        <view class='f-flex-fixed f-flex-cc'>
+            <text class='name'>{{userInfo.nickName}}</text>
+        </view>
+        
         <view class='avatarBox'>
-            <image style='width: 150rpx;height: 150rpx;'
-                src='{{userInfo.avatarUrl}}'
-            ></image>
+            <image style='width: 150rpx;height: 150rpx;' src='{{userInfo.avatarUrl}}'></image>
+        </view>
+    </view>
+    <view style='width: 100%;margin-top: 20rpx;'>
+        <view class='cell f-flex' data-page="myOrder" bindtap='toLink'>
+            <view class='icon myorder'></view>
+            <text class='fs-30'>我的订单</text>
+        </view>
+        <view class='cell f-flex' data-page="addressManage" bindtap='toLink'>
+            <view class='icon addressmanage'></view>
+            <text class='fs-30'>地址管理</text>
+        </view>
+        <view class='cell f-flex' data-page="coupon" bindtap='toLink'>
+            <view class='icon coupon'></view>
+            <text class='fs-30'>我的优惠券</text>
+        </view>
+        <view class='cell f-flex' data-page="service" bindtap='toLink'>
+            <view class='icon service'></view>
+            <view class='f-flex-fixed' style='position: relative'>
+                <text class='fs-30'>联系客服</text>
+                <button class='form_button fs-30' style="border: 0;" open-type="contact">
+                </button>
+            </view>
         </view>
     </view>
 </view>

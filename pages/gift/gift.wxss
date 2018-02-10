@@ -27,9 +27,18 @@
     text-align: left;
     font-weight: bold;
     color: #000;
+
 }
 
 .goods .content {
+    height: 66rpx;
     font-weight: normal;
+    line-height: 66rpx;
     color: #333;
+    overflow: hidden;
+}
+
+.goods.f-flex-reverse .hold {
+    padding-left: 0;
+    padding-right: 40rpx;
 }

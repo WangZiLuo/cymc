@@ -1,9 +1,9 @@
 <!--pages/coupon/coupon.wxml-->
 <view class="container">
     <view class="swiper-tab f-flex">
-        <view class="swiper-tab-list fs-23 {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">未使用</view>
-        <view class="swiper-tab-list fs-23 {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已过期</view>
-        <view class="swiper-tab-list fs-23 {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已使用</view>
+        <view class="swiper-tab-list fs-23 {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">未使用</view>
+        <view class="swiper-tab-list fs-23 {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">已过期</view>
+        <view class="swiper-tab-list fs-23 {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="switchNav">已使用</view>
     </view>
     <view class='tab-content f-flex-fixed'>
         <swiper class="swiper" current="{{currentTab}}" duration="300" bindchange="switchTab">
@@ -11,7 +11,17 @@
                 <scroll-view scroll-y="true" class="scoll-h">
                     <block wx:for="{{item.list}}" wx:key="index">
                         <view class="item-ans">
-                            {{item.content}}
+                            <view class='f-flex-wrap hold'>
+                                <view class='color'>
+                                    <text class='{{item.status == 1 ? "color" : ""}} fs-23' style='padding-right: 20rpx'>¥</text><text class='{{item.status == 1 ? "color" : ""}} fs-72'>{{item.money}}</text>
+                                </view> 
+                                <view class='fs-23' style='color: #666;'>
+                                    {{item.name}}
+                                </view>
+                            </view>
+                            <view class='{{item.status == 1 ? "color" : ""}} fs-23'>
+                                使用期限: {{item.startTim}} - {{item.endTim}}
+                            </view>
                         </view>
                     </block>
                 </scroll-view>

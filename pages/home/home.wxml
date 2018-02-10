@@ -1,19 +1,22 @@
 <!--pages/home/home.wxml-->
 <view class="container">
-    <view class="m-home-logo f-flex-cc"> 
-        <image src='/image/assets/home_logo.png'
-            mode='aspectFill'
-        ></image>
+    <view class="m-home-banner">
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{300}}">
+            <block wx:for="{{topCol.banner}}" wx:key="index">
+                <swiper-item>
+                    <image src="{{item.images}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
     </view>
     <view class='m-topColumn'>
-        <view class="banner">
-            <image></image>
-        </view>
         <view class="topNav f-flex-sb-fs">
-            <view class="navItem f-flex-col" wx:for="{{topCol.list}}" wx:key='{{index}}'>
-                <image src='{{item.imgUrl}}' ></image>
-                <view class="aLink">{{item.name}}</view>
-            </view>
+            <block wx:for="{{topCol.list}}" wx:key='{{index}}'>
+                <view class="navItem f-flex-col" data-type='{{ item.type }}' bindtap="toPage">
+                    <image src='{{item.imgUrl}}'></image>
+                    <view class="aLink">{{item.name}}</view>
+                </view>
+            </block>
         </view>
     </view>
     <view class='m-subColumn' wx:for='{{subCol}}' wx:key='{{index}}'>
@@ -21,41 +24,45 @@
             <view class='column_title f-flex-col'>
                 <text class='title'>[ {{item.title}} ]</text>
                 <text class='nickname'>{{item.nickname}}</text>
-                <image src='{{item.titImg}}'></image>
+                <image src='{{titImg[index]}}'></image>
             </view>
-            <view class='banner' style='width: 100%;'>
-                <image src='{{item.bannerImg}}'
-                    mode='aspectFill'
-                ></image>
+            <view class='banner' style='width: 100%;' data-type='{{ item.type }}' bindtap="toPage">
+                <image src='{{item.bannerImg}}' mode='aspectFill'></image>
             </view>
         </view>
         <view class='m-columnItem-fir f-flex-wrap' wx:if='{{item.type==1}}'>
-            <view class='goods f-flex-col' wx:for='{{item.list}}' wx:key='{{index}}'>
-                <image src='{{item.imgUrl}}'>
-                </image>
-                <text class='name'>{{item.name}}</text>
-                <text class='nickname'>{{item.nickname}}</text>
-            </view>
+            <block wx:for='{{item.list}}' wx:key='{{index}}'>
+                <view class='goods f-flex-col' data-id='{{ item.id }}' bindtap="toGoodsDetail">
+                    <image src='{{item.imgUrl}}'>
+                    </image>
+                    <text class='name'>{{item.name}}</text>
+                    <text class='nickname'>{{item.nickname}}</text>
+                </view>
+            </block>
         </view>
         <view class='m-columnItem-sec' wx:if='{{item.type==2}}'>
-            <view class="goods {{index%2==0?'f-flex':'f-flex-reverse'}}" wx:for='{{item.list}}' wx:key='{{index}}'>
-                <image src='{{item.imgUrl}}'>
-                </image>
-                <view class='f-flex-col f-flex-fixed'>
-                    <text class='name'>{{item.name}}</text>
-                    <text class='nickname'>{{item.nickname}}</text>
+            <block wx:for='{{item.list}}' wx:key='{{index}}'>
+                <view class="goods {{index%2==0?'f-flex':'f-flex-reverse'}}" data-id='{{ item.id }}' bindtap="toGoodsDetail">
+                    <image src='{{item.imgUrl}}'>
+                    </image>
+                    <view class='f-flex-col f-flex-fixed'>
+                        <text class='name'>{{item.name}}</text>
+                        <text class='nickname'>{{item.nickname}}</text>
+                    </view>
                 </view>
-            </view>
+            </block>
         </view>
         <view class='m-columnItem-thd' wx:if='{{item.type==3}}'>
-            <view class="goods {{index%2==0?'f-flex-reverse':'f-flex'}}" wx:for='{{item.list}}' wx:key='{{index}}'>
-                <image src='{{item.imgUrl}}'>
-                </image>
-                <view class='f-flex-col f-flex-fixed'>
-                    <text class='name'>{{item.name}}</text>
-                    <text class='nickname'>{{item.nickname}}</text>
+            <block wx:for='{{item.list}}' wx:key='{{index}}'>
+                <view class="goods {{index%2==0?'f-flex-reverse':'f-flex'}}" data-id='{{ item.id }}' bindtap="toGoodsDetail">
+                    <image src='{{item.imgUrl}}'>
+                    </image>
+                    <view class='f-flex-col f-flex-fixed'>
+                        <text class='name'>{{item.name}}</text>
+                        <text class='nickname'>{{item.nickname}}</text>
+                    </view>
                 </view>
-            </view>
+            </block>
         </view>
     </view>
 </view>

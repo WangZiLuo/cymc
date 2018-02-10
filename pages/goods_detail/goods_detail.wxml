@@ -1,13 +1,14 @@
 <!--pages/goods_detail/goods_detail.wxml-->
-<view class="container">
+<import src="../../wxParse/wxParse.wxml" /> 
+ 
+<view class="container"> 
     <view class='m-swiper'>
-        <swiper indicator-dots="{{true}}"
-            autoplay="{{false}}" interval="{{5000}}" duration="{{500}}" bindchange="listenSwiper">
-                <block wx:for="{{goodsInfo.banner}}" wx:key="index">
-                    <swiper-item class="{{index==actInx?'swiper-active':''}}">
-                        <image src="{{item}}" class="slide-image"/>
-                    </swiper-item>
-                </block>
+        <swiper indicator-dots="{{true}}" autoplay="{{false}}" interval="{{5000}}" duration="{{300}}" bindchange="listenSwiper">
+            <block wx:for="{{goodsInfo.banner}}" wx:key="index">
+                <swiper-item class="{{index==actInx?'swiper-active':''}}">
+                    <image src="{{item}}" class="slide-image" />
+                </swiper-item>
+            </block>
         </swiper>
     </view>
     <view class='m-goodsInfo'>
@@ -17,58 +18,69 @@
         </view>
         <text class='info'>{{goodsInfo.info}}</text>
         <view class='price'>
-            <i>￥</i><span>{{goodsInfo.price}}</span>
+            <i>￥</i>
+            <span>{{goodsInfo.price}}</span>
         </view>
     </view>
     <view class='m-detailHtml'>
-        <image src="{{item}}" wx:for="{{goodsInfo.imgHtml}}" wx:key="{{index}}"></image>
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        <!-- <image src="{{item}}" wx:for="{{goodsInfo.imgHtml}}" wx:key="{{index}}"></image> -->
     </view>
 </view>
 <view class='m-detail-bottomBar f-flex-sa-c'>
     <view class='link' data-page="home" bindtap='toLink'>商城</view>
     <view class='link' data-page="cart" bindtap='toLink'>购物车</view>
-    <view class='doCart' bindtap='popup'>+ 购物车</view>
-    <view class='doCart'>立即购买</view>
+    <view class='doCart' data-type="0" bindtap='popup'>+ 购物车</view>
+    <view class='doCart' data-type="1" bindtap='popup'>立即购买</view>
 </view>
-<view class="m-detail-paramselect {{isShow?'active-popup':''}}"  catchtouchmove='noTouch'>
+<view class="m-detail-paramselect {{isShow?'active-popup':''}}" catchtouchmove='noTouch'>
     <view class='paramselect'>
         <view class='info f-flex-wrap'>
-            <image></image>
+            <image
+                src="{{paramselect.imgUrl}}"
+            ></image>
             <view class='f-flex-col f-flex-fixed'>
-                <text class='name'>抹茶蛋糕</text>
-                <text class='secName'>初壹抹茶</text>
+                <text class='name'>{{paramselect.name}}</text>
+                <text class='secName'>{{paramselect.title}}</text>
                 <view class='hold'>
-                    <text class='discountPrice'>￥277</text><text class='price'>￥277</text>
+                    <text class='discountPrice'>￥{{paramselect.price}}</text>
+                    <text class='price'>￥277</text>
                 </view>
             </view>
         </view>
         <view class='tetChoose'>
-            <view><text class='fs-28'>预订时间 :</text><text class='fs-23'>{{paramselect.schTime}}</text></view>
-            <view><text class='fs-28'>规格 :</text><text class='fs-23'>已选择'{{paramselect.normHtml}}'</text></view>
-        </view>
-        <view class='chooseList f-flex-fs-c '>
-            <view class="fs-28 {{item.isCheck?'active-btn':''}}" wx:for='{{paramselect.norm}}' wx:key='{{index}}' data-index='{{index}}' bindtap='chooseNorm'>
-            {{item.html}}
+            <view>
+                <text class='fs-30'>预订时间 :</text>
+                <text class='fs-23'>{{paramselect.schTime}}</text>
+            </view>
+            <view>
+                <text class='fs-30'>规格 :</text>
+                <text class='fs-23'>已选择'{{paramselect.normHtml}}'</text>
             </view>
         </view>
+        <view class='chooseList f-flex-fs-c '>
+            <block wx:for='{{paramselect.norm}}' wx:key='{{index}}'>
+                <view class="fs-30 {{item.isCheck?'active-btn':''}}" data-index='{{index}}' bindtap='chooseNorm'>
+                    {{item.html}}
+                </view>
+            </block>
+        </view>
         <view class='amount f-flex-sb-c'>
-            <text class='fs-28'>数量</text>
+            <text class='fs-30'>数量</text>
             <view class='selNum f-flex-sb-c'>
                 <view class='btn' bindtap='minus'>-</view>
                 <view class='num'>{{paramselect.amount}}</view>
                 <view class='btn add' bindtap='add'>+</view>
             </view>
         </view>
-        <view class='recTime f-flex-sb-fs'>
+        <!-- <view class='recTime f-flex-sb-fs'> 
             <text class='fs-28'>收货时间 :</text>
             <view class='period f-flex-fixed f-flex-fs-c'>
                 <view class="border-1 {{item.isCheck?'active-btn':''}} {{item.optional?'':'border-das'}}" wx:for='{{paramselect.recTime}}' wx:key='index' data-index='{{index}}' bindtap='chooseRecTime'>{{item.html}}</view>
             </view>
-        </view>
+        </view> -->
     </view>
     <view class='confirm' bindtap='confirm'>确认</view>
 </view>
 <view class="popup-mask {{isShow?'mask-show':''}}" bindtap='popup' catchtouchmove='noTouch'>
 </view>
-
-

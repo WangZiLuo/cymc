@@ -1,41 +1,15 @@
 // pages/cake/cake.js
+var app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
-    data: {
+    data: { 
         request: {
             banner: '/image/assets/detail-img.png',
-            giftList: [
-                {
-                    id: 11,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: 'MATCHA CAKE',
-                    name: '抹茶蛋糕',
-                    content: '初壹特制抹茶曲奇订制'
-                },
-                {
-                    id: 12,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: 'MATCHA CAKE',
-                    name: '抹茶蛋糕',
-                    content: '初壹特制抹茶曲奇订制'
-                },
-                {
-                    id: 13,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: 'MATCHA CAKE',
-                    name: '抹茶蛋糕',
-                    content: '初壹特制抹茶曲奇订制'
-                },
-                {
-                    id: 14,
-                    imgUrl: '/image/assets/detail-img.png',
-                    title: 'MATCHA CAKE',
-                    name: '抹茶蛋糕',
-                    content: '初壹特制抹茶曲奇订制'
-                }
+            cakeList: [ 
+                
             ],
             rowList: [
                 {
@@ -74,9 +48,42 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.initData()
     },
-
+    initData() {
+        let _this = this
+        wx.request({
+            url: app.globalData.subDomain + '/API/ProgramApi.aspx',
+            data: {
+                dogetproductdetail: '1',
+                ptid: '1'
+            },
+            success: function (res) {
+                console.log(res)
+                if (res.data.msg == 3) {
+                    res.data.list.forEach((ele) => {
+                        let cakeListObj = {
+                            id: ele.wpid,
+                            imgUrl: ele.wptwopic,
+                            title: ele.wpvicename,
+                            name: ele.wpname,
+                            content: ele.wpdescribe
+                        }
+                        _this.data.request.cakeList.push(cakeListObj)
+                    })
+                    _this.setData({
+                        'request.cakeList': _this.data.request.cakeList
+                    })
+                }
+            }
+        })
+    },
+    toGoodsDetail(e) {
+        const parms = e.currentTarget.dataset.id;
+        wx.navigateTo({
+            url: '../goods_detail/goods_detail?wpid=' + parms
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
